@@ -1,14 +1,15 @@
-import { createContext, useState } from "react";
+
 import Form from "./assets/components/Form";
 import "./App.css";
+import { ThemeProvider } from "./context/ThemeContext";
 
 
 
  export default function App() {
  
   return (
-    <ThemeContext.Provider value={{theme,setTheme}}>
-      <div>
+   <ThemeProvider>
+     <div>
         <Form />
         <label>
           <input
@@ -21,7 +22,10 @@ import "./App.css";
           Use dark mode
         </label>
       </div>
-    </ThemeContext.Provider>
+
+   </ThemeProvider>
+     
+    
   );
 }
 
