@@ -3,7 +3,7 @@ import { ThemeContext } from "../../App";
 
 
 export default function Panel({ title, children }) {
-    const theme = useContext(ThemeContext)
+    const {theme,setTheme} = useContext(ThemeContext)
     const className = "panel-" + theme;
   return (
     <section className={className}>

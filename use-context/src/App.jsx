@@ -7,7 +7,7 @@ import "./App.css";
  export default function App() {
   const [theme, setTheme] = useState("light");
   return (
-    <ThemeContext.Provider value={theme}>
+    <ThemeContext.Provider value={{theme,setTheme}}>
       <div>
         <Form />
         <label>
