@@ -4,7 +4,7 @@ import "./App.css";
 
  export const ThemeContext = createContext();
 
-function App() {
+ export default function App() {
   const [theme, setTheme] = useState("light");
   return (
     <ThemeContext.Provider value={theme}>
@@ -25,4 +25,4 @@ function App() {
   );
 }
 
-export default App;
+
