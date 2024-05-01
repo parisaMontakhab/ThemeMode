@@ -6,9 +6,19 @@ function App() {
   
 
   return (
-    <>
-     hello
-    </>
+    <div>
+      <Form  />
+      <label>
+        <input
+          type="checkbox"
+          checked={theme === "dark"}
+          onChange={(e) => {
+            setTheme(e.target.checked ? "dark" : "light");
+          }}
+        />
+        Use dark mode
+      </label>
+    </div>
   )
 }
 
