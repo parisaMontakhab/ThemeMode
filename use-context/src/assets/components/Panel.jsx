@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../App";
+
+import { ThemeContext, ThemeProvider } from "../../context/ThemeContext";
 
 
 export default function Panel({ title, children }) {
