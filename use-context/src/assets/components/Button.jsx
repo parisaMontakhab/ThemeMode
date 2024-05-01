@@ -1,6 +1,8 @@
-import React from "react";
+import  { useContext } from "react";
+import { ThemeContext } from "../../App";
 
 export default function Button() {
+    const theme = useContext(ThemeContext);
   const className = "button-" + theme;
   return <button className={className}>{children}</button>;
 }

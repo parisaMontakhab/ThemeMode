@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 import Form from "./assets/components/Form";
 import "./App.css";
 
-const ThemeContext = createContext();
+ export const ThemeContext = createContext();
 
 function App() {
   const [theme, setTheme] = useState("light");
