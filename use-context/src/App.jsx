@@ -1,7 +1,7 @@
 
 import Form from "./assets/components/Form";
 import "./App.css";
-import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeProvider, useTheme } from "./context/ThemeContext";
 
 
 
@@ -11,22 +11,30 @@ import { ThemeProvider } from "./context/ThemeContext";
    <ThemeProvider>
      <div>
         <Form />
-        <label>
-          <input
-            type="checkbox"
-            checked={theme === "dark"}
-            onChange={(e) => {
-              setTheme(e.target.checked ? "dark" : "light");
-            }}
-          />
-          Use dark mode
-        </label>
+        <ToggleTheme/>
+       
       </div>
 
    </ThemeProvider>
      
     
   );
+}
+
+function ToggleTheme (){
+  const {theme,setTheme} = useTheme()
+  return(
+    <label>
+    <input
+      type="checkbox"
+      checked={theme === "dark"}
+      onChange={(e) => {
+        setTheme(e.target.checked ? "dark" : "light");
+      }}
+    />
+    Use dark mode
+  </label>
+  )
 }
 
 
