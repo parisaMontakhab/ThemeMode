@@ -7,7 +7,7 @@ const ThemeContext = createContext();
 function App() {
   const [theme, setTheme] = useState("light");
   return (
-    <ThemeContext>
+    <ThemeContext.Provider value={theme}>
       <div>
         <Form />
         <label>
@@ -21,7 +21,7 @@ function App() {
           Use dark mode
         </label>
       </div>
-    </ThemeContext>
+    </ThemeContext.Provider>
   );
 }
 
